@@ -31,11 +31,9 @@ const FormSoftware: FC = () => {
     description: "",
   };
 
-  const submitForm = async (values: any) => {
-    console.log(values);
-  };
+  const submitForm = async (values: any) => {};
   return (
-    <Box display="flex" justifyContent="center" sx={{ mt: 3 }}>
+    <Box display="flex" justifyContent="center" sx={{ my: 3 }}>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -50,8 +48,6 @@ const FormSoftware: FC = () => {
             handleSubmit,
             handleBlur,
           } = formik;
-
-          console.log(values);
 
           return (
             <form
@@ -133,7 +129,7 @@ const FormSoftware: FC = () => {
                 }
               />
 
-              <Button variant="outlined">Zamów konsultację</Button>
+              <Button variant="contained">Zamów konsultację</Button>
             </form>
           );
         }}

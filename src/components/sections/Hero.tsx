@@ -1,8 +1,7 @@
-import Box from "@mui/system/Box";
-import Grid from "@mui/system/Unstable_Grid";
-import styled from "@mui/system/styled";
 import { FC } from "react";
 import { Container, Typography } from "@mui/material";
+import Box from "@mui/system/Box";
+import Grid from "@mui/system/Unstable_Grid";
 
 interface Props {
   title: string;
@@ -26,7 +25,7 @@ const Hero: FC<Props> = ({ title }) => {
         >
           <Grid xs={2} sm={4}>
             <Box>
-              <img src="" alt="" />
+              <img src="/programmer.jpg" alt="" />
             </Box>
           </Grid>
           <Grid xs={2} sm={4}>

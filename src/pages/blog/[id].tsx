@@ -4,9 +4,6 @@ import Layout from "@/components/_shared/navigation/Layout";
 import { Typography, Box } from "@mui/material";
 
 const SinglePostPage: NextPage = ({ post }: any) => {
-  console.log("post", post);
-
-  console.log("post", post!);
   return (
     <>
       <Layout title="poldevs" description="desc">

@@ -1,5 +1,5 @@
-import Hero from "@/components/sections/Hero";
 import axios from "axios";
+import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Layout from "@/components/_shared/navigation/Layout";
 

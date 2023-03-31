@@ -1,17 +1,19 @@
 import { NextPage } from "next";
+import axios from "axios";
 import HeroSoftware from "@/components/sections/HeroSoftware";
 import Layout from "@/components/_shared/navigation/Layout";
-import axios from "axios";
 import FormSoftware from "@/components/sections/FormSoftware";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const SoftwarePage: NextPage = ({ posts }: any) => {
-  console.log(posts);
   return (
     <>
       <Layout title="poldevs" description="desc">
         <HeroSoftware text={posts.acf.section_hero.text} />
         <Box>
+          <Typography variant="h3" align="center" sx={{ my: 3 }}>
+            Zamów konsultację
+          </Typography>
           <FormSoftware />
         </Box>
       </Layout>
