@@ -2,8 +2,13 @@ import { NextPage } from "next";
 import axios from "axios";
 import Layout from "@/components/_shared/navigation/Layout";
 import { Typography, Box } from "@mui/material";
+import { Post } from "@/types/post";
 
-const SinglePostPage: NextPage = ({ post }: any) => {
+interface SinglePostPageProps {
+  post: Post;
+}
+
+const SinglePostPage: NextPage<SinglePostPageProps> = ({ post }) => {
   return (
     <>
       <Layout title="poldevs" description="desc">

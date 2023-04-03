@@ -1,4 +1,5 @@
 import Layout from "@/components/_shared/navigation/Layout";
+import { Post } from "@/types/post";
 import {
   Button,
   Card,
@@ -12,9 +13,12 @@ import {
 import axios from "axios";
 import { NextPage } from "next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const BlogPage: NextPage = ({ posts }: any) => {
+interface BlogPageProps {
+  posts: Post[];
+}
+
+const BlogPage: NextPage<BlogPageProps> = ({ posts }) => {
   return (
     <Layout title="poldevs" description="desc">
       <section>

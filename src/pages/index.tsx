@@ -2,13 +2,20 @@ import axios from "axios";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Layout from "@/components/_shared/navigation/Layout";
+import { Post } from "@/types/post";
+import { NextPage } from "next";
 
-const Home = ({ posts }: any) => {
+interface HomePageProps {
+  post: Post;
+}
+
+const HomePage: NextPage<HomePageProps> = ({ post }) => {
+  console.log("post home", post);
   return (
     <>
       <Layout title="poldevs" description="desc">
-        <Hero title={posts.acf.section_hero.text} />
-        <Services data={posts} />
+        <Hero title={post?.acf?.section_hero?.text} />
+        <Services post={post} />
       </Layout>
     </>
   );
@@ -21,9 +28,9 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      posts: res.data,
+      post: res.data,
     },
   };
 };
 
-export default Home;
+export default HomePage;

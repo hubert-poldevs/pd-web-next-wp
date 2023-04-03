@@ -9,12 +9,14 @@ import {
   CardMedia,
   Button,
 } from "@mui/material";
+import { Post } from "@/types/post";
 
-interface Props {
-  data: any;
+interface ServicesProps {
+  post: Post;
 }
 
-const Services: FC<Props> = (props) => {
+const Services: FC<ServicesProps> = ({ post }) => {
+  console.log("post", post);
   return (
     <section>
       <Container
@@ -38,10 +40,10 @@ const Services: FC<Props> = (props) => {
               />
               <CardContent sx={{ height: 250 }}>
                 <Typography gutterBottom variant="h5" component="div">
-                  {props.data?.acf?.section_services?.service_crm?.title}
+                  {post?.acf?.section_services?.service_crm?.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {props.data?.acf?.section_services?.service_crm?.text}
+                  {post?.acf?.section_services?.service_crm?.text}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -60,10 +62,10 @@ const Services: FC<Props> = (props) => {
               />
               <CardContent sx={{ height: 250 }}>
                 <Typography gutterBottom variant="h5" component="div">
-                  {props.data?.acf?.section_services?.service_landing?.title}
+                  {post?.acf?.section_services?.service_landing?.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {props.data?.acf?.section_services?.service_landing?.text}
+                  {post?.acf?.section_services?.service_landing?.text}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -82,10 +84,10 @@ const Services: FC<Props> = (props) => {
               />
               <CardContent sx={{ height: 250 }}>
                 <Typography gutterBottom variant="h5" component="div">
-                  {props.data?.acf?.section_services?.service_website?.title}
+                  {post?.acf?.section_services?.service_website?.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {props.data?.acf?.section_services?.service_website?.text}
+                  {post?.acf?.section_services?.service_website?.text}
                 </Typography>
               </CardContent>
               <CardActions>
